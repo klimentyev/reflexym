@@ -5,11 +5,12 @@
 #include <stdexcept>
 #include <string>
 
-struct api_t {
-    double (*cos)(double);
-    double (*sin)(double);
-    void (*sincos)(double, double*, double*);
-    const char* (*zlibVersion)(void);
+struct api_t
+{
+    double (*cos)(double) = nullptr;
+    double (*sin)(double) = nullptr;
+    void (*sincos)(double, double*, double*) = nullptr;
+    const char* (*zlibVersion)() = nullptr;
 };
 
 int main()

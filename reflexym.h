@@ -5,7 +5,7 @@
 template <typename T>
 T reflexym_loader(void* handle)
 {
-    T api;
+    T api{};
 
     constexpr auto ctx = std::meta::access_context::unchecked();
     template for (constexpr auto field : define_static_array(nonstatic_data_members_of(^^T, ctx)))
