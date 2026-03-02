@@ -52,14 +52,14 @@ int main()
         }
         if (math_api.cos)
         {
-            std::cout << math_api.cos(0.0) <<  "\n";
+            std::cout << math_api.cos(0.0) << "\n";
         }
         if (math_api.sincos)
         {
             double s = 0;
             double c = 0;
             math_api.sincos(0.0, &s, &c);
-            std::cout << s << " " << c << " " <<  "\n";
+            std::cout << s << " " << c << "\n";
         }
         dlclose(handle);
     }
